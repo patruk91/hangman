@@ -1,0 +1,10 @@
+Ufoludek|2018-12-18 17:01:24|10|Stockholm
+He-Man|2018-12-18 17:01:34|38|Kabul
+Szkieletor|2018-12-18 17:05:07|48|Guatemala City
+Hulk|2018-12-18 17:01:24|6|Stockholm
+Robocop|2018-12-18 17:01:34|17|Kabul
+Zenek|2018-12-18 17:05:07|25|Guatemala City
+Kubus Puchatek|2018-12-20 10:58:25|3|San Jose
+Patryk|2018-12-21 10:26:47|11|Bucharest
+Kl|2018-12-21 10:28:03|4|Bissau
+Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa|2018-12-21 10:28:19|1|Dublin
