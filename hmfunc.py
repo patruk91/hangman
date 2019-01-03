@@ -208,9 +208,16 @@ def add_high_score(name, win_time, capital):
     :param capital: capital
     """
     with open("high_score.txt", "a") as file_object:
-        file_object.write("{}|{}|{}|{}\n".format(name.title(),
-                                                 time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime()),
-                                                 round(win_time / len(capital)), capital))
+        file_object.write(
+            "{}|{}|{}|{}\n".format(
+                name.title(),
+                time.strftime(
+                    "%Y-%m-%d %H:%M:%S",
+                    time.gmtime()),
+                round(
+                    win_time /
+                    len(capital)),
+                capital))
 
 
 def show_high_score():
@@ -265,16 +272,32 @@ def handle_high_score_formatting(result):
     result_sorted = calculated_sizes[4]
 
     print("TOP 10 HIGH SCORE: ")
-    print("{:<3}|{:^{s_o_n}}|{:^{s_o_d}}|{:^{x}}|{:^{s_o_c}}|"
-          .format("LP", "NAME", "DATE", "SCORE", "CAPITAL",
-                  s_o_n=size_of_name + 3, s_o_d=size_of_date + 3, x=10, s_o_c=size_of_capital + 3))
+    print(
+        "{:<3}|{:^{s_o_n}}|{:^{s_o_d}}|{:^{x}}|{:^{s_o_c}}|" .format(
+            "LP",
+            "NAME",
+            "DATE",
+            "SCORE",
+            "CAPITAL",
+            s_o_n=size_of_name + 3,
+            s_o_d=size_of_date + 3,
+            x=10,
+            s_o_c=size_of_capital + 3))
     print("-" * (size_of_name + size_of_date + size_of_capital + 27))
 
     i = 1
     for line in result_sorted[:max_len]:
-        print("{:<3}|{:^{s_o_n}}|{:^{s_o_d}}|{:^{x}}|{:^{s_o_c}}|"
-              .format(i, line[0], line[1], line[2], line[3],
-                      s_o_n=size_of_name + 3, s_o_d=size_of_date + 3, x=10, s_o_c=size_of_capital + 3))
+        print(
+            "{:<3}|{:^{s_o_n}}|{:^{s_o_d}}|{:^{x}}|{:^{s_o_c}}|" .format(
+                i,
+                line[0],
+                line[1],
+                line[2],
+                line[3],
+                s_o_n=size_of_name + 3,
+                s_o_d=size_of_date + 3,
+                x=10,
+                s_o_c=size_of_capital + 3))
         i += 1
 
 
@@ -286,9 +309,14 @@ def show_user_result(capital, attempt_count, win_time):
     :param win_time: time in which user guess capital
     """
     print("\nVICTORY!")
-    print("You guess " + capital + " in " + str(attempt_count) + " guesses. "
-                                                                 "It took you, " + str(
-        round(win_time)) + " seconds.\n\n")
+    print("You guess " +
+          capital +
+          " in " +
+          str(attempt_count) +
+          " guesses. "
+          "It took you, " +
+          str(round(win_time)) +
+          " seconds.\n\n")
 
 
 def set_win_conditions(start_time):
@@ -309,7 +337,7 @@ def looser_screen(capital, lives, win_condition):
     :param lives: actual amount of lives,
     :param win_condition: True/False
     """
-    if lives == 0 or lives == -1 and win_condition == True:
+    if lives == 0 or lives == -1 and win_condition:
         os.system("clear")
         with open("hangman.txt") as my_file:
             lines = my_file.readlines()[51:60]

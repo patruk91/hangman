@@ -23,3 +23,5 @@ If the basic version works, please implement the following functionalities:
 5. Add high score - some people take pride in their score. At the end of successful game program should ask user for his/her name and save that information to a file - name| date | guessing_time | guessing_tries | guessed_word (i.e. Marcin | 26.10.2016 14:15 | 45 | Warsaw).
 6. Expand high score - program should remember 10 best scores (read from and write to a file) and display them at the end, after success / failure.
 7. Add ASCII art! How awesome it will be if after each wrong guess a part of hangman appears? Or a spaceship will be closer to the Earth? Or something different - use your imagination! :)
+
+You can run game in demo mode (you'll get answer(capital)): python3 the_hangman_game.py --demo
